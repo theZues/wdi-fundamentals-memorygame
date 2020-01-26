@@ -4,17 +4,29 @@ const cards = ["queen", "queen", "king", "king"];
 
 const cardsInPlay = [];
 
-let cardOne = cards[0];
+function checkForMatch() {
+	if (cardsInPlay[0] === cardsInPlay[1]) {
+		console.log("You found a match");
+	}
+		else {
+		console.log("sorry, try again");
+		}
 
-cardsInPlay.push(cardOne);
+}
 
-console.log("User flipped Queen");
+function flipCard(cardId) {
+	console.log("User flipped " + cards[cardId]);
 
-let cardTwo = cards[1];
+	cardsInPlay.push(cards[cardId]);
+}
 
-cardsInPlay.push(cardTwo);
+flipCard(0);
+flipCard(2);
+checkForMatch();
 
-console.log("User flipped queen");
+
+
+/*  My first version of if statement
 
 if (cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay[1]) {
 		alert("You found a match");
@@ -22,5 +34,6 @@ if (cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay[1]) {
 		else if	(cardsInPlay[0] !== cardsInPlay[1]){
 			alert("sorry, try again");
 		}
+}
 
-
+*/
